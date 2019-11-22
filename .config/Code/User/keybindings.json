@@ -1,0 +1,239 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "-workbench.action.tasks.build"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "editor.action.goToDeclaration",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.goToDeclaration",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+alt+b",
+    "command": "editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+f12",
+    "command": "-editor.action.goToImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+shift+f10",
+    "command": "editor.action.peekImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+shift+f12",
+    "command": "-editor.action.peekImplementation",
+    "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+alt+q",
+    "command": "editor.action.referenceSearch.trigger",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "shift+f12",
+    "command": "-editor.action.referenceSearch.trigger",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+k ctrl+b",
+    "command": "editor.action.openDeclarationToTheSide",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+k f12",
+    "command": "-editor.action.openDeclarationToTheSide",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "-workbench.action.zoomIn"
+  },
+  {
+    "key": "f4",
+    "command": "workbench.action.tasks.build"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "workbench.files.action.refreshFilesExplorer"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "-workbench.action.quit"
+  },
+  {
+    "key": "alt+left",
+    "command": "workbench.action.navigateBack",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+right",
+    "command": "workbench.action.navigateForward",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+f2",
+    "command": "editor.action.changeAll",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+f2",
+    "command": "-editor.action.changeAll",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "editor.action.previewDeclaration",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+shift+f10",
+    "command": "-editor.action.previewDeclaration",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+5",
+    "command": "editor.emmet.action.matchTag"
+  },
+  {
+    "key": "ctrl+5",
+    "command": "-workbench.action.focusFifthEditorGroup"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "paredit.sexpRangeExpansion",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-paredit.sexpRangeExpansion",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+'",
+    "command": "paredit.sexpRangeContraction",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-paredit.sexpRangeContraction",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+alt+' space",
+    "command": "paredit.rangeForDefun",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+alt+w space",
+    "command": "-paredit.rangeForDefun",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+backspace",
+    "command": "-paredit.killSexpBackward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+delete",
+    "command": "paredit.killSexpBackward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+backspace",
+    "command": "deleteWordLeft",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "paredit.backwardSexp",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "-paredit.backwardSexp",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "paredit.barfSexpForward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "-paredit.barfSexpForward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "paredit.forwardSexp",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "-paredit.forwardSexp",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "paredit.slurpSexpForward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-paredit.slurpSexpForward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+alt+left",
+    "command": "paredit.slurpSexpBackward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+left",
+    "command": "-paredit.slurpSexpBackward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+alt+right",
+    "command": "paredit.barfSexpBackward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "-paredit.barfSexpBackward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+shift+delete",
+    "command": "paredit.killSexpForward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  },
+  {
+    "key": "ctrl+delete",
+    "command": "-paredit.killSexpForward",
+    "when": "calva:pareditValid && !panelFocus && !sideBarFocus && paredit:keyMap =~ /original|strict/"
+  }
+]

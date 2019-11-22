@@ -1,0 +1,124 @@
+{
+	"[clojure]": {
+		"editor.wordSeparators": "\t ()\"':,;~@#$%^&{}[]`.-=/",
+		"editor.autoClosingBrackets": "always",
+		"editor.autoClosingQuotes": "always",
+		"editor.formatOnType": true,
+		"editor.autoIndent": true,
+		"editor.formatOnPaste": true,
+		"files.trimTrailingWhitespace": false,
+		"editor.matchBrackets": false
+	},
+	"[go]": {
+		"editor.links": false
+	},
+	"[handlebars]": {
+		"editor.formatOnSave": false
+	},
+	"[json]": {
+		"editor.tabSize": 4
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": null,
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false,
+		"editor.formatOnType": false,
+		"editor.quickSuggestions": false,
+		"editor.wordWrap": "on"
+	},
+	"[purescript]": {
+		"editor.formatOnSave": false
+	},
+	"[python]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4
+	},
+	"[typescript]": {
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		}
+	},
+	"[typescriptreact]": {
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		}
+	},
+	"[yaml]": {
+		"editor.autoIndent": false,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"breadcrumbs.enabled": true,
+	"calva.paredit.defaultKeyMap": "strict",
+	"C_Cpp.clang_format_path": "/usr/bin/clang-format",
+	"C_Cpp.default.cppStandard": "c++11",
+	"editor.links": false,
+	"editor.minimap.enabled": false,
+	"editor.rulers": [
+		80
+	],
+	"editor.tabSize": 2,
+	"editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"files.associations": {
+		"*.go.tmpl": "gogo",
+		"SConscript": "python"
+	},
+	"files.autoSave": "afterDelay",
+	"files.trimTrailingWhitespace": true,
+	"git.confirmSync": false,
+	"git.ignoreLegacyWarning": true,
+	"gitlens.advanced.messages": {
+		"suppressGitVersionWarning": true
+	},
+	"go.autocompleteUnimportedPackages": true,
+	"go.buildOnSave": "off",
+	"go.delveConfig": {
+		"apiVersion": 2,
+		"dlvLoadConfig": {
+			"followPointers": true,
+			"maxArrayValues": 64,
+			"maxStringLen": 4096,
+			"maxStructFields": -1,
+			"maxVariableRecurse": 1
+		},
+		"showGlobalVariables": true
+	},
+	"go.lintOnSave": "file",
+	"go.useLanguageServer": true,
+	"javascript.format.enable": true,
+	"javascript.referencesCodeLens.enabled": true,
+	"javascript.updateImportsOnFileMove.enabled": "never",
+	"prettier.disableLanguages": [
+		"vue",
+		"markdown"
+	],
+	"prettier.tslintIntegration": true,
+	"python.linting.pylintArgs": [
+		"--generate-members"
+	],
+	"python.pythonPath": "/usr/bin/python3",
+	"rust.build_on_save": false,
+	"search.exclude": {
+		"**/bower_components": false
+	},
+	"search.useIgnoreFiles": false,
+	"solidity.linter": "solium",
+	"solidity.solhintRules": {
+		"indent": [
+			"error",
+			4
+		]
+	},
+	"telemetry.enableTelemetry": false,
+	"typescript.tsserver.log": "verbose",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"vscode-mysql.enableTelemetry": false,
+	"window.zoomLevel": -1,
+	"calva.prettyPrintingOptions": {
+		"enabled": true,
+		"printEngine": "pprint",
+		"width": 120
+	}
+}
