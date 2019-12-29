@@ -224,7 +224,8 @@ bar {
 	strip_workspace_numbers yes
 
     colors {
-        background #0c0d0e
+        #background #0c0d0e
+        background #454947
         statusline #F9FAF9
         separator  #454947
 

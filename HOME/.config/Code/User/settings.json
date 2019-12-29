@@ -120,5 +120,6 @@
 		"enabled": true,
 		"printEngine": "pprint",
 		"width": 120
-	}
+	},
+	"python.jediEnabled": false
 }
