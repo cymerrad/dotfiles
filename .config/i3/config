@@ -265,6 +265,7 @@ exec --no-startup-id alttab -fg "#d58681" -bg "#4a4a4a" -frame "#eb564d" -t 128x
 exec --no-startup-id pulseaudio
 exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
+exec --no-startup-id mpris-proxy
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
