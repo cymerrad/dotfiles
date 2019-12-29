@@ -34,15 +34,16 @@ if __name__ == '__main__':
         # WhyTF target.exists() doesn't report symlinks?
         if target.exists() or target.is_symlink():
             if not target.is_symlink():
+                print(f"BACKUP {target} -> {backup}")
                 backup.parent.mkdir(parents=True, exist_ok=True)
                 shutil.move(target, backup)
             else:
                 # it's just a symlink
-                print(f"removing {target}")
+                print(f"REMOVE {target}")
                 os.remove(target)
         else:
             target.parent.mkdir(parents=True, exist_ok=True)
 
 
-        print(f"{source} -> {target}")
+        print(f"LINK {source} -> {target}")
         os.symlink(source, target)
