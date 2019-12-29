@@ -1,5 +1,3 @@
 # Dotfiles
-Softlink them
+My configuration files & a script for soft linking them where they should be.
 
-# TODO
-Script that does `mkdir -p` relative to $HOME and softlinks the files.

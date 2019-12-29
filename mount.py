@@ -44,4 +44,5 @@ if __name__ == '__main__':
             target.parent.mkdir(parents=True, exist_ok=True)
 
 
+        print(f"{source} -> {target}")
         os.symlink(source, target)
