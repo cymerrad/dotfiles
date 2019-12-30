@@ -1,9 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from pathlib import Path
 import shutil
 import os
 
-wut = __file__
 os.chdir(Path(__file__).parent)
 CWD = Path(os.getcwd())
 HOME = CWD / "HOME"
