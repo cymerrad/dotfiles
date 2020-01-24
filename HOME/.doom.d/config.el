@@ -28,7 +28,7 @@
 (setq doom-theme 'doom-one)
 
 ;; If you intend to use org, it is recommended you change this!
-(setq org-directory "~/org/")
+(setq org-directory "~/Documents/org/")
 
 ;; If you want to change the style of line numbers, change this to `relative' or
 ;; `nil' to disable it:
@@ -50,3 +50,29 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+;; (after! helm
+;;   ;; I want backspace to go up a level, like ivy
+;;   (add-hook! 'helm-find-files-after-init-hook
+;;     (map! :map helm-find-files-map
+;;           "<DEL>" #'helm-find-files-up-one-level)))
+
+;;(use-package doom-themes
+;;  :config
+;;  (doom-themes-set-faces 'doom-one
+;;    '(functions yellow)
+;;    '(variables fg)))
+
+
+(setq confirm-kill-processes nil)
+
+;; this fixes irritating (and wrong) warning on IPython startup
+(setq python-shell-prompt-detect-failure-warning nil)
+(setq +python-ipython-repl-args '("--quiet --simple-prompt" "--no-color-info"))
+
+;; TODO
+;; better kill previous word
+;; smartparens isn't smart enough: after deleting left paren, delete also right
+;; more VSCode shortcuts for opening tree view and jumping around
+
+;;
