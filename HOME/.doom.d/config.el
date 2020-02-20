@@ -25,7 +25,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. These are the defaults.
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-dark+)
 
 ;; If you intend to use org, it is recommended you change this!
 (setq org-directory "~/Documents/org/")
@@ -67,6 +67,7 @@
 (setq confirm-kill-processes nil)
 
 ;; this fixes irritating (and wrong) warning on IPython startup
+;; https://github.com/emacs-mirror/emacs/blob/master/lisp/progmodes/python.el#L2279
 (setq python-shell-prompt-detect-failure-warning nil)
 (setq +python-ipython-repl-args '("--quiet --simple-prompt" "--no-color-info"))
 
