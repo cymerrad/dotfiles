@@ -236,10 +236,6 @@
     "command": "workbench.action.terminal.focusNext"
   },
   {
-    "key": "ctrl+shift+k",
-    "command": "workbench.action.terminal.focusPrevious"
-  },
-  {
     "key": "ctrl+alt+right",
     "command": "paredit.slurpSexpForward",
     "when": "calva:replWindowActive || editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/"

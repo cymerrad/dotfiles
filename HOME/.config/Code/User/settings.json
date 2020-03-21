@@ -103,7 +103,6 @@
 	"search.exclude": {
 		"**/bower_components": false
 	},
-	"search.useIgnoreFiles": false,
 	"solidity.linter": "solium",
 	"solidity.solhintRules": {
 		"indent": [
@@ -121,5 +120,11 @@
 		"printEngine": "pprint",
 		"width": 120
 	},
-	"python.jediEnabled": false
+	"python.jediEnabled": false,
+	// "editor.fontFamily": "Droid Sans Mono",
+	"editor.fontFamily": "Source Code Pro",
+	"terminal.integrated.fontFamily": "monospace",
+	"workbench.settings.enableNaturalLanguageSearch": false,
+	"update.mode": "manual",
+	"extensions.ignoreRecommendations": true
 }
