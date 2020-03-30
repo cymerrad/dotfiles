@@ -107,3 +107,4 @@ function terminal() {
 	i3-msg -- exec alacritty --working-directory $(pwd)
 }
 
+bindkey \^U backward-kill-line
