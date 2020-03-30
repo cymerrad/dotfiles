@@ -264,11 +264,11 @@ exec --no-startup-id start_conky_live_solarized
 exec --no-startup-id alttab -fg "#d58681" -bg "#4a4a4a" -frame "#eb564d" -t 128x150 -i 127x64 -d 2
 
 # pulseaudio upgrade effects
-#exec --no-startup-id volumeicon
-exec --no-startup-id pulseaudio --start
-exec --no-startup-id pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
-exec --no-startup-id mpris-proxy
+#exec --no-startup-id pulseaudio --start
+#exec --no-startup-id pa-applet
+#bindsym $mod+Ctrl+m exec pavucontrol
+#exec --no-startup-id mpris-proxy
+exec --no-startup-id volumeicon
 exec --no-startup-id blueman-tray
 
 # launch categorized menu
