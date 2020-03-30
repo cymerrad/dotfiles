@@ -1,0 +1,10 @@
+# in constant TODO
+
+# usual starters
+pacman -S \
+    alacritty 
+
+# bluetooth is always problematic, but recently less so
+pacman -S pulseaudio-bluetooth
+
+
