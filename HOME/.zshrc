@@ -129,3 +129,4 @@ function cp-p() {
     cp ${opt_root}/${path_to_file} ${dir_to_copy}
 }
 
+alias vim=nvim
