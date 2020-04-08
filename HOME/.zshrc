@@ -104,7 +104,28 @@ unsetopt AUTO_CD
 . ~/.bash_aliases 2>/dev/null
 
 function terminal() {
-	i3-msg -- exec alacritty --working-directory $(pwd)
+    i3-msg -- exec alacritty --working-directory $(pwd)
 }
 
 bindkey \^U backward-kill-line
+
+function cp-p() {
+    if [ "$#" -lt 2 ]; then
+      echo "Usage: cp-p FILE_TO_COPY TARGET_DIRECTORY [RELATIVE_DIR=~/]" >&2
+      return
+    fi
+
+    _home=`echo ~`
+    opt_root=${3-${_home}}
+
+    [ ! -f $1 ] && echo $1 must exist and be a file && return
+    [ ! -d $2 ] && echo $2 must exist and be a dir && return
+
+    path_to_file=`realpath --relative-to=${opt_root} ${1}`
+    dir_to_file=`dirname ${path_to_file}`
+    dir_to_copy=$2/${dir_to_file}
+    mkdir -p ${dir_to_copy}
+    echo cp ${opt_root}/${path_to_file} ${dir_to_copy}
+    cp ${opt_root}/${path_to_file} ${dir_to_copy}
+}
+
