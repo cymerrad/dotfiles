@@ -30,16 +30,15 @@ if __name__ == '__main__':
         target = HOST_HOME / file_path
         backup = BACKUP / file_path
 
-        # WhyTF target.exists() doesn't report symlinks?
+        # target.exists() doesn't report symlinks
         if target.exists() or target.is_symlink():
-            if not target.is_symlink():
+            if target.is_symlink():
+                print(f"REMOVE {target}")
+                os.remove(target)
+            else:
                 print(f"BACKUP {target} -> {backup}")
                 backup.parent.mkdir(parents=True, exist_ok=True)
                 shutil.move(target, backup)
-            else:
-                # it's just a symlink
-                print(f"REMOVE {target}")
-                os.remove(target)
         else:
             target.parent.mkdir(parents=True, exist_ok=True)
 
