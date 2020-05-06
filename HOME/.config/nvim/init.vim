@@ -4,7 +4,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+"Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 "Plug 'christoomey/vim-tmux-navigator'
@@ -137,7 +138,8 @@ autocmd BufWritePre *
         \ call mkdir(expand('<afile>:h'), 'p') |
     \ endif
 
-inoremap jk <ESC>
+inoremap <F12> <ESC>
+
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -165,25 +167,25 @@ endfunction
 
 noremap <silent> <C-n> :call ToggleNetrw()<CR>
 
-function! ProjectDrawer()
-    if 0 == argc()
-        ToggleNetrw()
-    end
-endfunction
-
-augroup StartUp
-  autocmd!
-  autocmd VimEnter * :call ProjectDrawer()
-augroup END
-
+"function! ProjectDrawer()
+"    if 0 == argc()
+"        ToggleNetrw()
+"    end
+"endfunction
+"
+"augroup StartUp
+"  autocmd!
+"  autocmd VimEnter * :call ProjectDrawer()
+"augroup END
 
 
 map <C-b> <Nop>
 map <C-f> <Nop>
-nnoremap <C-b>l :ls<CR>
-nnoremap <C-b>p :bp<CR>
-nnoremap <C-b>n :bn<CR>
-nnoremap <C-b>d :bd<CR>
+nnoremap <C-b><C-l> :ls<CR>
+nnoremap <C-b><C-p> :bp<CR>
+nnoremap <C-b><C-b> :bn<CR>
+nnoremap <C-b><C-w> <C-^>
+nnoremap <C-b><C-d> :bd<CR>
 
 " Always display the status line, even if only one window is displayed
 set laststatus=2
@@ -267,6 +269,21 @@ endfunction
 command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-args>)
 nnoremap <silent> <C-b>d :Bclose<CR>
 
+function! s:Bopen(nth)
+    let buffers = filter(range(1, bufnr('$')), 'bufexists(v:val)')
+    echo buffers
+    echo a:nth
+endfunction
+command! -complete=buffer -range=1 Bopen call <SID>Bopen(<line1>)
+
+
+fun! SetupCommandAlias(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfun
+
+call SetupCommandAlias("Q","qa!")
 
 " vim-prettier
 "let g:prettier#quickfix_enabled = 0
