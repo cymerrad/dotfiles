@@ -16,7 +16,8 @@
 		"editor.formatOnSave": false
 	},
 	"[json]": {
-		"editor.tabSize": 4
+		"editor.tabSize": 4,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[markdown]": {
 		"editor.defaultFormatter": null,
@@ -44,7 +45,6 @@
 		}
 	},
 	"[yaml]": {
-		"editor.autoIndent": false,
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
@@ -90,11 +90,11 @@
 	"javascript.format.enable": true,
 	"javascript.referencesCodeLens.enabled": true,
 	"javascript.updateImportsOnFileMove.enabled": "never",
+
 	"prettier.disableLanguages": [
 		"vue",
 		"markdown"
 	],
-	"prettier.tslintIntegration": true,
 	"python.linting.pylintArgs": [
 		"--generate-members"
 	],
@@ -120,11 +120,15 @@
 		"printEngine": "pprint",
 		"width": 120
 	},
-	"python.jediEnabled": false,
+	"python.jediEnabled": true,
 	// "editor.fontFamily": "Droid Sans Mono",
 	"editor.fontFamily": "Source Code Pro",
 	"terminal.integrated.fontFamily": "monospace",
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"update.mode": "manual",
-	"extensions.ignoreRecommendations": true
+	"extensions.ignoreRecommendations": true,
+	"workbench.colorTheme": "Default Dark+",
+	"workbench.colorCustomizations": {},
+	"dayNightThemeSwitcher.dayTheme": "Default Light+",
+	"dayNightThemeSwitcher.nightTheme": "Default Dark+"
 }
