@@ -1,0 +1,9 @@
+[user]
+	email = cymerrad@gmail.com
+	name = Radosław Cymer
+[credential]
+	helper = store
+	helper = cache
+#[filter "gitignorelines"]
+#	clean = "sed '/#gitignore$/'d"
+#	smudge = cat
