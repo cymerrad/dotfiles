@@ -3,6 +3,7 @@
 # usual starters
 pacman -S \
     alacritty 
+    neovim	
 
 # bluetooth is always problematic, but recently less so
 pacman -S pulseaudio-bluetooth
