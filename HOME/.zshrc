@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt AUTO_CD
 
 . ~/.bash_aliases 2>/dev/null
+. ~/.profile 2>/dev/null
 
 function terminal() {
     i3-msg -- exec alacritty --working-directory $(pwd)
@@ -131,4 +132,3 @@ function cp-p() {
 
 setopt ignore_eof
 
-export PATH=$PATH:~/.local/node_modules/bin
