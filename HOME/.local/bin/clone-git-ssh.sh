@@ -15,10 +15,12 @@ url=${last}
 [ -z "$url" ] && print_help "Provide github repo url" && exit 1
 
 #accepts /blob/commit/path/to/somewhere at the end
-gh_re='^https?://github.com/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)(/.*)?$'
+gh_re='^https?://github\.com/([_0-9A-Za-z\-]+)/([_0-9A-Za-z\-]+)(/.*)?$'
 
-repo=`echo $url | sed -rne "\|${gh_re}|s|${gh_re}|\1/\2|p"`
-[ -z "$repo" ] && print_help "Invalid github repo url" && exit 1
+echo $url sed -rne "\%${gh_re}%s%${gh_re}%\2/\2%p"
+
+repo=`echo $url | sed -rne "\%${gh_re}%s%${gh_re}%\1/\2%p"`
+[ -z "$repo" ] && echo "Invalid github repo url" && exit 1
 
 url_ssh="git@github.com:${repo}"
 
