@@ -7,3 +7,8 @@ export BROWSER=/usr/bin/firefox
 export PATH=$PATH:~/.local/node_modules/bin
 export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 export BUNDLE_PATH=~/.bundle
+
+export PATH=$PATH:~/Code/go/bin
+export GOPATH=$PATH:~/Code/go
+
+export PATH=$PATH:~/.dotnet/tools

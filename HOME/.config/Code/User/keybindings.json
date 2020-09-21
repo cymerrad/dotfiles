@@ -5,10 +5,6 @@
     "command": "-workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+shift+b",
-    "command": "-workbench.action.tasks.build"
-  },
-  {
     "key": "ctrl+b",
     "command": "editor.action.goToDeclaration",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
@@ -61,10 +57,6 @@
   {
     "key": "ctrl+=",
     "command": "-workbench.action.zoomIn"
-  },
-  {
-    "key": "f4",
-    "command": "workbench.action.tasks.build"
   },
   {
     "key": "ctrl+r",
@@ -153,5 +145,13 @@
   {
     "key": "alt+shift+i",
     "command": "editor.action.inspectTMScopes"
+  },
+  {
+    "key": "f4",
+    "command": "-workbench.action.tasks.build"
+  },
+  {
+    "key": "ctrl+shift+x",
+    "command": "-workbench.view.extensions"
   }
 ]

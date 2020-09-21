@@ -69,7 +69,7 @@ HISTSIZE=100000
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git docker vscode lol)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +107,7 @@ unsetopt AUTO_CD
 function terminal() {
     i3-msg -- exec alacritty --working-directory $(pwd)
 }
+alias T=terminal
 
 bindkey \^U backward-kill-line
 
@@ -119,16 +120,26 @@ function cp-p() {
     _home=`echo ~`
     opt_root=${3-${_home}}
 
-    [ ! -f $1 ] && echo $1 must exist and be a file && return
+    [ ! -f $1 ] && [ ! -d $1 ] && echo $1 must exist and be a file or dir && return
     [ ! -d $2 ] && echo $2 must exist and be a dir && return
 
     path_to_file=`realpath --relative-to=${opt_root} ${1}`
     dir_to_file=`dirname ${path_to_file}`
     dir_to_copy=$2/${dir_to_file}
     mkdir -p ${dir_to_copy}
-    echo cp ${opt_root}/${path_to_file} ${dir_to_copy}
+    echo cp -r ${opt_root}/${path_to_file} ${dir_to_copy}
     cp ${opt_root}/${path_to_file} ${dir_to_copy}
 }
 
 setopt ignore_eof
 
+function ryzhen_sshfs() {
+    _kinda_static_ip_but_not_really=94.172.187.32
+    sudo sshfs -d -p 2137 -o allow_other,default_permissions,IdentityFile=/home/radek/.ssh/id_rsa radek@${_kinda_static_ip_but_not_really}:/home/slave /mnt/ryzhen
+    
+}
+
+#export PATH=$PATH:/home/radek/Code/github/blockhunters/macaque
+export COLORTERM=alacritty
+
+export _konsoleta_kinda_static_ip=79.191.214.145

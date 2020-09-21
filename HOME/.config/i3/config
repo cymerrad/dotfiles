@@ -148,7 +148,7 @@ bindsym $mod+f fullscreen toggle
 # bindsym $mod+e layout toggle split
 
 # again, instead of that shit use toggling
-bindsym $mod+t layout toggle tabbed splith splitv
+bindsym $mod+e layout toggle tabbed splith splitv
 
 # toggle tiling / floating
 # bindsym $mod+Shift+space floating toggle
@@ -164,7 +164,7 @@ bindsym $mod+Shift+t focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+s focus child
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -263,7 +263,7 @@ exec --no-startup-id alttab -fg "#d58681" -bg "#4a4a4a" -frame "#eb564d" -t 128x
 # pulseaudio upgrade effects
 #exec --no-startup-id pulseaudio --start
 #exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+Ctrl+m exec pavucontrol
 #exec --no-startup-id mpris-proxy
 exec --no-startup-id volumeicon
 exec --no-startup-id blueman-tray
@@ -287,11 +287,14 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 
 # launching scripts
-bindsym $mod+F12 mode "$mode_scripts"
-set $mode_scripts (1) -> {left, top-right, bottom-right}
+bindsym $mod+F4 mode "$mode_scripts"
+set $mode_scripts (1,2) -> {left, top-right, bottom-right} (3) -> lid-switch (F4) -> {theme switch}
 mode "$mode_scripts" {
     # TODO
-    bindsym 1 exec $SCRIPTS/open_terminals.sh, mode "default"
+    bindsym 1 exec $SCRIPTS/open_terminals.sh ~/Projects/branchmonkey, mode "default"
+    bindsym 2 exec $SCRIPTS/open_terminals.sh ~/Projects/macaque, mode "default"
+    bindsym 3 exec $SCRIPTS/lid-switch.sh, mode "default"
+    bindsym F4 exec $SCRIPTS/alacritty_theme_switch.sh, mode "default"
 
     # exit mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -302,7 +305,7 @@ mode "$mode_scripts" {
 
 bindsym $mod+Escape exec --no-startup-id i3exit lock, mode "default"
 bindsym $mod+Shift+Escape exec --no-startup-id i3exit suspend, mode "default"
-bindsym $mod+0 mode "$mode_system"
+bindsym $mod+F12 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"

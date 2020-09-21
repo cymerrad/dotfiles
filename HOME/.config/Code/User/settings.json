@@ -4,16 +4,17 @@
 		"editor.autoClosingBrackets": "always",
 		"editor.autoClosingQuotes": "always",
 		"editor.formatOnType": true,
-		"editor.autoIndent": true,
+		"editor.autoIndent": "brackets",
 		"editor.formatOnPaste": true,
 		"files.trimTrailingWhitespace": false,
-		"editor.matchBrackets": false
 	},
 	"[go]": {
 		"editor.links": false
 	},
 	"[handlebars]": {
 		"editor.formatOnSave": false
+	},
+	"[hy]": {
 	},
 	"[json]": {
 		"editor.tabSize": 4,
@@ -32,7 +33,7 @@
 	},
 	"[python]": {
 		"editor.insertSpaces": true,
-		"editor.tabSize": 4
+		"editor.tabSize": 4,
 	},
 	"[typescript]": {
 		"editor.codeActionsOnSave": {
@@ -63,7 +64,8 @@
 	"explorer.confirmDragAndDrop": false,
 	"files.associations": {
 		"*.go.tmpl": "gogo",
-		"SConscript": "python"
+		"SConscript": "python",
+		"*.hy": "hy"
 	},
 	"files.autoSave": "afterDelay",
 	"files.trimTrailingWhitespace": true,
@@ -120,7 +122,7 @@
 		"printEngine": "pprint",
 		"width": 120
 	},
-	"python.jediEnabled": true,
+	"python.jediEnabled": false,
 	// "editor.fontFamily": "Droid Sans Mono",
 	"editor.fontFamily": "Source Code Pro",
 	"terminal.integrated.fontFamily": "monospace",
@@ -130,5 +132,10 @@
 	"workbench.colorTheme": "Default Dark+",
 	"workbench.colorCustomizations": {},
 	"dayNightThemeSwitcher.dayTheme": "Default Light+",
-	"dayNightThemeSwitcher.nightTheme": "Default Dark+"
+    "dayNightThemeSwitcher.nightTheme": "Default Dark+",
+		"python.languageServer": "Microsoft",
+		"[jsonc]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"search.useIgnoreFiles": false
 }
